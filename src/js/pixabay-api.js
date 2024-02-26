@@ -3,7 +3,7 @@ const BASE_URL = "https://pixabay.com/api/";
 const loader = document.querySelector(".loader");
 let searchQuery = "";
 
-export function fetchData(searchQuery) {
+export function fetchData(searchQuery, loader) {
   const params = new URLSearchParams({
     key: API_KEY,
     q: searchQuery,

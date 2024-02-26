@@ -1,4 +1,6 @@
-export function renderMurcup(data) {
+const container = document.querySelector(".gallery");
+
+export function renderMurcup(data, lightbox) {
   const murcup = data.hits
     .map(
       (element) => `<div class="gallery-item">
