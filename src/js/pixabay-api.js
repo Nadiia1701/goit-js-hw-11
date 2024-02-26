@@ -1,3 +1,8 @@
+const API_KEY = "42569915-bcd29008899db620988a57306";
+const BASE_URL = "https://pixabay.com/api/";
+const loader = document.querySelector(".loader");
+let searchQuery = "";
+
 export function fetchData(searchQuery) {
   const params = new URLSearchParams({
     key: API_KEY,
