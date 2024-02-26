@@ -1,9 +1,7 @@
-const container = document.querySelector(".gallery");
-
-export function renderMurcup(data, lightbox) {
-  const murcup = data.hits
+export function renderMurcup(data) {
+  return data.hits
     .map(
-      (element) => `<div class="gallery-item">
+      element => `<div class="gallery-item">
       <a class="gallery-link" href="${element.largeImageURL}">
           <img class="gallery-image" src="${element.webformatURL}" alt="${element.tags}">
       </a>
@@ -15,9 +13,6 @@ export function renderMurcup(data, lightbox) {
       </div>
   </div>`
     )
-    .join("");
-
-  container.innerHTML = murcup;
-
-  lightbox.refresh();
+    .join('')
+  
 }
